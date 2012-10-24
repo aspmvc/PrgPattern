@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+    <body>
+        @if (TempData.ContainsKey(PrgPattern.Controllers.HomeController.MessageKey))
+        {
+            <div style="color:red;font-weight: bold">
+               @TempData[PrgPattern.Controllers.HomeController.MessageKey]     
+            </div>
+        }
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>

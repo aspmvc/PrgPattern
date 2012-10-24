@@ -1,0 +1,28 @@
+﻿@model PrgPattern.ViewModels.EditViewModel
+
+@{
+    ViewBag.Title = "PRG pattern example";
+}
+
+<h2>PRG pattern example</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm())
+{
+    <fieldset style="display:inline-block">
+        <legend>Please fill this form</legend>
+        <div>
+            @Html.LabelFor(a => a.FirstName): @Html.EditorFor(a => a.FirstName) 
+        </div>
+        <div>
+            @Html.LabelFor(a => a.LastName): @Html.EditorFor(a => a.LastName) 
+        </div>
+        <div>
+            @Html.LabelFor(a => a.Age): @Html.EditorFor(a => a.Age) 
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </fieldset>
+}
